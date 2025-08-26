@@ -53,6 +53,8 @@ Low-Altitude-Intelligence/
 
 │ └── templates/
 
+│ │ └── detection_template.py
+
 │
 
 ├── outputs/
@@ -67,9 +69,6 @@ Low-Altitude-Intelligence/
 
 │ └── visdrone_parse_log.txt
 
-│
-
-├── datasets/
 
 │
 
