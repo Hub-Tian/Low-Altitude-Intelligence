@@ -68,6 +68,9 @@ Low-Altitute-Intelligence/
 
 │ └── visdrone_parse_log.txt
 
+├── examples/
+
+│ └── run_full_conversion.py
 
 │
 
@@ -122,6 +125,11 @@ then ​​download the dataset and place it in the datasets/folder​​ so tha
 🔗 ​​Download link:​​ https://github.com/VisDrone/VisDrone-Dataset
 
 > 📌 **Note:** Currently, only the VisDrone Detection Task is implemented as an example. In the future, you can gradually add other datasets (e.g., COCO, custom UAV data, etc.) by providing the corresponding annotation formats and category mappings, then creating new task modules as needed.
+
+🧪 Standalone Full Script
+If you prefer to run the ​​entire process in a single script​​ (without using the modular structure), you can use a standalone script that integrates all steps:
+
+examples/run_full_conversion.py
 
 ---
 
