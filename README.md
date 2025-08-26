@@ -2,20 +2,20 @@
 
 ## 🎯 Project Objective
 
-This project aims to build a **generalized SFT (Supervised Fine-Tuning) data conversion tool for low-altitude economic scenarios**, which converts annotation data from various low-altitude datasets (such as UAV-captured images/videos) into **Question-and-Answer (QA) pair format suitable for supervised fine-tuning of large language models (LLMs) or vision-language models (VLMs)**.
+This project aims to build a **generalized SFT (Supervised Fine-Tuning) data conversion tool for low-altitude economic scenarios**, which converts annotation data from various low-altitute datasets (such as UAV-captured images/videos) into **Question-and-Answer (QA) pair format suitable for supervised fine-tuning of large language models (LLMs) or vision-language models (VLMs)**.
 
 ---
 
 ## 🧩 Project Background
 
-In low-altitude economic applications—such as UAV logistics, urban inspection, security monitoring, and agricultural protection—a large volume of aerial imagery or video data is typically collected and annotated for AI model training. Common task types include:
+In low-altitute economic applications—such as UAV logistics, urban inspection, security monitoring, and agricultural protection—a large volume of aerial imagery or video data is typically collected and annotated for AI model training. Common task types include:
 
-1. **Detection (Detection)**: Detecting objects in images (e.g., drones, vehicles, pedestrians, buildings, etc.) and outputting bounding boxes.
-2. **Classification (Classification)**: Categorizing images, regions, or objects (e.g., determining whether something is a violation, congestion, or a specific target).
-3. **Segmentation (Segmentation)**: Pixel-level segmentation of targets or regions (e.g., roads, buildings, vegetation, etc.).
-4. **Counting (Counting)**: Counting the number of specific targets (e.g., number of vehicles, crowds, etc.).
-5. **Trajectory / Tracking (Trajectory / Tracking)**: Tracking the movement trajectory of targets (e.g., drones, vehicles, animals, etc.).
-6. **Event / Anomaly (Event / Anomaly)**: Detecting abnormal events (e.g., illegal flying, fire, collision, congestion, etc.).
+1. **Detection**: Detecting objects in images (e.g., drones, vehicles, pedestrians, buildings, etc.) and outputting bounding boxes.
+2. **Classification**: Categorizing images, regions, or objects (e.g., determining whether something is a violation, congestion, or a specific target).
+3. **Segmentation**: Pixel-level segmentation of targets or regions (e.g., roads, buildings, vegetation, etc.).
+4. **Counting**: Counting the number of specific targets (e.g., number of vehicles, crowds, etc.).
+5. **Trajectory / Tracking**: Tracking the movement trajectory of targets (e.g., drones, vehicles, animals, etc.).
+6. **Event / Anomaly**: Detecting abnormal events (e.g., illegal flying, fire, collision, congestion, etc.).
 
 > ✅ This project serves as a **starting point for developing a general-purpose script tool**, with the goal of supporting the conversion of annotation data for the above **six major task types** into **SFT-format QA pairs**.
 > 
@@ -26,7 +26,7 @@ In low-altitude economic applications—such as UAV logistics, urban inspection,
 ## 🗂️ Project Directory Structure (Tree View)
 
 ```text
-Low-Altitude-Intelligence/
+Low-Altitute-Intelligence/
 
 ├── src/
 
@@ -98,6 +98,10 @@ Low-Altitude-Intelligence/
 - **`category_mapping.py`**: Mapping table for VisDrone category IDs and their corresponding names
 - **`path_utils.py`**: Path-related utilities, such as ensuring output directories exist
 
+### 4. ▶️ Outputs
+- Detection tasks JSON: `outputs/tasks/detection_tasks.json`
+- SFT-format QA pairs: `outputs/sft/sft_detection_qa.json`
+- Log file: `logs/visdrone_parse_log.txt`
 ---
 
 ## 📂 Currently Used Dataset
@@ -107,34 +111,17 @@ Low-Altitude-Intelligence/
 - Image format: `.jpg`
 - Task type: Object Detection (Bounding Box)
 
-    Due to GitHub's file size limitations, the ​​VisDrone dataset​​ has not been uploaded to this repository.
+Due to GitHub's file size limitations, the ​​VisDrone dataset has not been uploaded to this repository​​.
 
-    Please download the dataset manually and place it in the datasets/visdrone/directory on your local machine.
+To avoid uploading large files, this project ​​does not include the datasets/directory by default​​.
 
-    ​​Download link:​​ https://github.com/VisDrone/VisDrone-Dataset
+You need to ​​manually create the datasets/folder (if it does not already exist)​​ at the same level as the src/directory,
 
+then ​​download the dataset and place it in the datasets/folder​​ so that the program can correctly read the annotation and image files.
+
+🔗 ​​Download link:​​ https://github.com/VisDrone/VisDrone-Dataset
 
 > 📌 **Note:** Currently, only the VisDrone Detection Task is implemented as an example. In the future, you can gradually add other datasets (e.g., COCO, custom UAV data, etc.) by providing the corresponding annotation formats and category mappings, then creating new task modules as needed.
-
----
-
-## ▶️ How to Run
-
-### 1. Environment Requirements
-- Python 3.8+
-- No additional third-party libraries required (only uses Python standard library)
-
-### 2. Running the Program
-Execute the following command in the root directory of the project:
-
-python src/main.py
-
-Alternatively, you can directly run `main.py` in PyCharm.
-
-### 3. View the Outputs
-- Detection tasks JSON: `outputs/tasks/detection_tasks.json`
-- SFT-format QA pairs: `outputs/sft/sft_detection_qa.json`
-- Log file: `logs/visdrone_parse_log.txt`
 
 ---
 
@@ -156,7 +143,7 @@ Alternatively, you can directly run `main.py` in PyCharm.
 
 ## 🙌 Summary
 
-Starting from the **SFT-format conversion needs of low-altitude economic datasets**, and using the **VisDrone Detection Dataset** as the first implementation example, this project has achieved:
+Starting from the **SFT-format conversion needs of low-altitute economic datasets**, and using the **VisDrone Detection Dataset** as the first implementation example, this project has achieved:
 - The full pipeline from **annotation parsing → task construction → SFT QA pair generation**
 - A **modular, extensible code structure** that lays the foundation for the other five task types (Classification, Segmentation, Counting, Trajectory, Event)
 
