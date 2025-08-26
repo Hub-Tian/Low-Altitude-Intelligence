@@ -109,6 +109,13 @@ Low-Altitude-Intelligence/
 - Image format: `.jpg`
 - Task type: Object Detection (Bounding Box)
 
+    Due to GitHub's file size limitations, the ​​VisDrone dataset​​ has not been uploaded to this repository.
+
+    Please download the dataset manually and place it in the datasets/visdrone/directory on your local machine.
+
+    ​​Download link:​​ https://github.com/VisDrone/VisDrone-Dataset
+
+
 > 📌 **Note:** Currently, only the VisDrone Detection Task is implemented as an example. In the future, you can gradually add other datasets (e.g., COCO, custom UAV data, etc.) by providing the corresponding annotation formats and category mappings, then creating new task modules as needed.
 
 ---

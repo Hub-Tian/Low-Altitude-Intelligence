@@ -32,4 +32,8 @@ logs/
 
 # Ignore the entire VisDrone dataset folder, do not upload to remote repository
 datasets/Visdrone/
-
+*.zip
+*.tar.gz
+*.h5
+*.pt
+*.ckpt
