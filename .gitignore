@@ -17,15 +17,19 @@ venv.bak/
 .vscode/
 .idea/
 
-# OS
+# Operating System
 Thumbs.db
 .DS_Store
 
-# Build outputs
+# Build Outputs
 build/
 dist/
 *.egg-info/
 
-# 其它
+# Others
 *.log
 logs/
+
+# Ignore the entire VisDrone dataset folder, do not upload to remote repository
+datasets/Visdrone/
+
