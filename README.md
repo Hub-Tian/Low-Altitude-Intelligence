@@ -129,8 +129,6 @@ Low-Altitude-Intelligence/
 ### 2. Running the Program
 Execute the following command in the root directory of the project:
 
-bash
-
 python src/main.py
 
 Alternatively, you can directly run `main.py` in PyCharm.
