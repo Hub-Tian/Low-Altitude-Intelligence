@@ -80,6 +80,7 @@ Low-Altitute-Intelligence/
 ```
 > 💡 **Notes:**
 > - Currently, the project takes the **VisDrone Detection Dataset** as its first use case, and implements the full pipeline from `.txt annotation → detection task → SFT QA pair`.
+> - We chose to first convert our own dataset into the detection task format and then transform the detection task format into SFT QA pairs because this allows the `detection task → SFT QA pair` process to share a common piece of code.
 > - The project adopts a **modular design**, making it easy to extend to the other five task types (Classification, Segmentation, Counting, Trajectory, Event) by simply adding corresponding task modules.
 
 ---
